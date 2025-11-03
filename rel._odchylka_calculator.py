@@ -5,6 +5,7 @@ presnost_na_desatine_miesta = 5
 background_color = 'gray95'
 button_color = 'gray90'
 entry_and_list_color = 'white'
+text_color = 'black'
 
 root = tk.Tk()
 root.geometry("700x500")
@@ -17,7 +18,7 @@ root.rowconfigure(1, weight=1)
 root.rowconfigure(2, weight=1)
 root.rowconfigure(3, weight=100)
 
-title = tk.Label(root, text='Relatívna odchylka', font=('Arial', 20), anchor='center', bg=background_color)
+title = tk.Label(root, text='Relatívna odchylka', fg=text_color, font=('Arial', 20), anchor='center', bg=background_color)
 title.grid(row=0, column=0, sticky='nsew', columnspan=2)
 
 entry_frame = tk.Frame(root, bg=background_color)
@@ -32,29 +33,29 @@ data_frame.columnconfigure(0, weight=1)
 data_frame.columnconfigure(1, weight=1)
 data_frame.columnconfigure(2, weight=1)
 
-entry = tk.Entry(entry_frame, font=('Arial', 15), bg=entry_and_list_color)
+entry = tk.Entry(entry_frame, fg=text_color, font=('Arial', 15), bg=entry_and_list_color)
 entry.grid(row=1, column=0, sticky='nsew', pady=50, padx=10)
 entry.focus()
 
-enter = tk.Button(entry_frame, text='Enter', font=('Arial', 15), bg=button_color)
+enter = tk.Button(entry_frame, text='Enter', fg=text_color, font=('Arial', 15), bg=button_color)
 enter.grid(row=1, column=1, sticky='nsew', pady=50)
 
-clear = tk.Button(entry_frame, text='Clear', font=('Arial', 15), bg=button_color)
+clear = tk.Button(entry_frame, text='Clear', fg=text_color, font=('Arial', 15), bg=button_color)
 clear.grid(row=1, column=2, sticky='nsew', padx=10, pady=50)
 
 datavar = tk.StringVar()
-data_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=datavar, bg=entry_and_list_color)
+data_listbox = tk.Listbox(root, fg=text_color, font=('Arial', 15), listvariable=datavar, bg=entry_and_list_color)
 data_listbox.grid(row=3, column=0, sticky='nsew',padx=10, pady=10)
 
 deviationvar = tk.StringVar()
-deviation_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=deviationvar, bg=entry_and_list_color)
+deviation_listbox = tk.Listbox(root, fg=text_color, font=('Arial', 15), listvariable=deviationvar, bg=entry_and_list_color)
 deviation_listbox.grid(row=3, column=1, sticky='nsew', padx=10, pady=10)
 
-averagel = tk.Label(data_frame, text='Priemerná hodnota\n', font=('Arial', 15), bg=background_color)
+averagel = tk.Label(data_frame, text='Priemerná hodnota\n', fg=text_color, font=('Arial', 15), bg=background_color)
 averagel.grid(row=0, column=0, sticky='nsew')
-avg_deviationl = tk.Label(data_frame, text='Priemerná odchylka\n', font=('Arial', 15), bg=background_color)
+avg_deviationl = tk.Label(data_frame, text='Priemerná odchylka\n', fg=text_color, font=('Arial', 15), bg=background_color)
 avg_deviationl.grid(row=0, column=1, sticky='nsew')
-relative_deviationl = tk.Label(data_frame, text='Relatívna odchylka\n', font=('Arial', 15), bg=background_color)
+relative_deviationl = tk.Label(data_frame, text='Relatívna odchylka\n', fg=text_color, font=('Arial', 15), bg=background_color)
 relative_deviationl.grid(row=0, column=2, sticky='nsew')
 
 data_list = []
