@@ -3,6 +3,7 @@ from tkinter import messagebox
 
 presnost_na_desatine_miesta = 5
 background_color = 'gray95'
+button_color = 'gray90'
 
 root = tk.Tk()
 root.geometry("700x500")
@@ -34,10 +35,10 @@ entry = tk.Entry(entry_frame, font=('Arial', 15))
 entry.grid(row=1, column=0, sticky='nsew', pady=50, padx=10)
 entry.focus()
 
-enter = tk.Button(entry_frame, text='Enter', font=('Arial', 15))
+enter = tk.Button(entry_frame, text='Enter', font=('Arial', 15), bg=button_color)
 enter.grid(row=1, column=1, sticky='nsew', pady=50)
 
-clear = tk.Button(entry_frame, text='Clear', font=('Arial', 15))
+clear = tk.Button(entry_frame, text='Clear', font=('Arial', 15), bg=button_color)
 clear.grid(row=1, column=2, sticky='nsew', padx=10, pady=50)
 
 datavar = tk.StringVar()
