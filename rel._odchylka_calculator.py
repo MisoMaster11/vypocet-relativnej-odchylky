@@ -4,6 +4,7 @@ from tkinter import messagebox
 presnost_na_desatine_miesta = 5
 background_color = 'gray95'
 button_color = 'gray90'
+entry_and_list_color = 'white'
 
 root = tk.Tk()
 root.geometry("700x500")
@@ -31,7 +32,7 @@ data_frame.columnconfigure(0, weight=1)
 data_frame.columnconfigure(1, weight=1)
 data_frame.columnconfigure(2, weight=1)
 
-entry = tk.Entry(entry_frame, font=('Arial', 15))
+entry = tk.Entry(entry_frame, font=('Arial', 15), bg=entry_and_list_color)
 entry.grid(row=1, column=0, sticky='nsew', pady=50, padx=10)
 entry.focus()
 
@@ -42,11 +43,11 @@ clear = tk.Button(entry_frame, text='Clear', font=('Arial', 15), bg=button_color
 clear.grid(row=1, column=2, sticky='nsew', padx=10, pady=50)
 
 datavar = tk.StringVar()
-data_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=datavar)
+data_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=datavar, bg=entry_and_list_color)
 data_listbox.grid(row=3, column=0, sticky='nsew',padx=10, pady=10)
 
 deviationvar = tk.StringVar()
-deviation_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=deviationvar)
+deviation_listbox = tk.Listbox(root, font=('Arial', 15), listvariable=deviationvar, bg=entry_and_list_color)
 deviation_listbox.grid(row=3, column=1, sticky='nsew', padx=10, pady=10)
 
 averagel = tk.Label(data_frame, text='Priemerná hodnota\n', font=('Arial', 15), bg=background_color)
