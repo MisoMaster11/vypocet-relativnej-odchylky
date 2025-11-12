@@ -4,9 +4,9 @@ from tkinter import messagebox
 
 #=========== Configuration ===========#
 presnost_na_desatine_miesta = 5
-background_color = 'gray95'
-button_color = 'gray90'
-entry_and_list_color = 'white'
+background_color = "#D0F8FF"
+button_color = "#66A9E0"
+entry_and_list_color = "#EAFEFF"
 text_color = 'black'
 #=====================================#
 
@@ -49,11 +49,11 @@ clear.grid(row=1, column=2, sticky='nsew', padx=10, pady=50)
 
 datavar = tk.StringVar()
 data_listbox = tk.Listbox(root, fg=text_color, font=('Arial', 20), listvariable=datavar, bg=entry_and_list_color)
-data_listbox.grid(row=3, column=0, sticky='nsew',padx=10, pady=10)
+data_listbox.grid(row=3, column=0, sticky='nsew',padx=30, pady=30)
 
 deviationvar = tk.StringVar()
 deviation_listbox = tk.Listbox(root, fg=text_color, font=('Arial', 20), listvariable=deviationvar, background=entry_and_list_color)
-deviation_listbox.grid(row=3, column=1, sticky='nsew', padx=10, pady=10)
+deviation_listbox.grid(row=3, column=1, sticky='nsew', padx=30, pady=30)
 
 averagel = ctk.CTkLabel(data_frame, text='Priemerná hodnota\n', text_color=text_color, font=('Arial', 20), fg_color=background_color)
 averagel.grid(row=0, column=0, sticky='nsew')
