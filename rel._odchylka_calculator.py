@@ -68,7 +68,7 @@ def list_to_stringvar(list = [], avg: float = 0, avg_deviation: float = 0, devia
     global datavar, deviationvar
     strdata = 'Údaje: \n'
     strdeviations = 'Odchylky: \n'
-    for i in list:
+    for i in list: 
         strdata += str(round(i, presnost_na_desatine_miesta)) + '\n'
     for i in deviations:
         strdeviations += '+' if i >= 0 else '- '
@@ -112,7 +112,6 @@ def clear_list(event = None):
 
 enter.configure(command=add_to_list)
 clear.configure(command=clear_list)
-root.bind_all('<BackSpace>', clear_list)
 root.bind_all('<Delete>', clear_list)
 root.bind_all('<Return>', add_to_list)
 list_to_stringvar()
